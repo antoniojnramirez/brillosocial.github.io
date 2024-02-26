@@ -1,0 +1,613 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+p{ font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(217, 43, 226);
+}
+
+button:hover{
+    background-color: rgb(160, 32, 167);
+}
+
+.boton_arriba {
+    padding: 10px;
+    background-color: transparent; /* Fondo transparente */
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Agregar transición para suavizar el efecto */
+}
+
+.boton_arriba img {
+    width: 20px; /* Ajustar el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantener la proporción de aspecto */
+    opacity: 0.7; /* Opacidad inicial */
+}
+
+.boton_arriba:hover {
+    opacity: 1; /* Aumentar la opacidad al pasar el ratón */
+}
+
+/* Estilos para el contenedor del cuadro de búsqueda */
+#busqueda {
+    margin: 20px 0;
+    text-align: right;
+}
+
+/* Estilos para el input de búsqueda */
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    outline: none; /* Quita el contorno azul al hacer clic */
+}
+
+/* Estilos para el input cuando está enfocado */
+#searchInput:focus {
+    border-color: #007bff; /* Cambia el color del borde al enfocar */
+}
+
+/* Estilos para el placeholder del input */
+::placeholder {
+    color: #999; /* Cambia el color del placeholder */
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(245, 245, 245);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(160, 32, 167);
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(160, 32, 167);
+}
+
+#hero{
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(../img/img4.jpeg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden !important;
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#hero .wave{
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    height: 11rem;
+    width: 100%;
+    background: url(../img/wave.png);
+    background-size: 100rem 11rem;
+    animation: waves 8s linear infinite;
+    background-repeat: repeat-x;
+}
+
+#hero .wave2{
+    animation-direction: reverse;
+    animation-duration: 6s;
+    opacity: .3;
+}
+
+#hero .wave3{
+    animation-duration: 4s;
+    opacity: .5;
+}
+
+@keyframes waves{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+}
+
+#nosotros .container{
+    text-align: center;
+    padding: 200px 12px;
+    
+}
+
+#ofrecemos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../img/salones24.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 50vh;
+}
+
+#galeria{
+    text-align: center;
+    padding: 200px 12px;
+    
+}
+/*galeria de fotos*/
+#galeria .fotos{
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.fotos img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .5;
+    transition: .5s ease;
+}
+
+.fotos img:hover{
+    cursor: pointer;
+    opacity: 1;
+    width: 20px;
+    height: 150px;
+    filter: contrast(125%);
+}
+
+img{
+    max-width: 300px;
+    height: auto;
+}
+
+#ofertas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 50vh;
+}
+
+#lugares{
+    text-align: center;
+    padding: 200px 12px;
+    
+}
+
+/*galeria de fotos*/
+#lugares .fotos{
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.fotos img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .5;
+    transition: .5s ease;
+}
+
+.fotos img:hover{
+    cursor: pointer;
+    opacity: 1;
+    width: 20px;
+    height: 150px;
+    filter: contrast(125%);
+}
+
+img{
+    max-width: 300px;
+    height: auto;
+}
+
+#clientes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 50vh;
+}
+
+#paquetes{
+    text-align: center;
+    padding: 200px 12px;
+    
+}
+
+footer {
+    background-color: rgb(230, 230, 230);
+    color: #393939;
+    padding: 20px 0;
+    text-align: center;
+    display: flex; /* Agrega display: flex; para usar flexbox eliminar */
+    justify-content: space-between; /* Divide el espacio entre los elementos eliminar */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea eliminar*/
+}
+
+.redessociales {
+    width: calc(33.33% - 20px); /* Calcula el ancho de cada elemento para que haya 3 en una fila */
+    margin: 10px; /* Agrega un margen entre los elementos */
+    text-align: center; /* Centra el contenido */
+
+}
+
+.redessociales a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.redessociales a:hover {
+    color: #00f; /* Cambia el color al pasar el ratón sobre los iconos */
+}
+
+.contactame {
+    display: flex; /* Utiliza flexbox para alinear verticalmente los elementos */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Alinea los elementos horizontalmente al centro */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contactame p {
+    margin: 10px 0; /* Ajusta el margen entre los párrafos */
+    color: #333; /* Cambia el color del texto */
+    font-size: 18px; /* Ajusta el tamaño de fuente */
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Alinea verticalmente los iconos con el texto */
+    justify-content: center; /* Alinea horizontalmente los iconos con el texto */
+}
+.contactame p i {
+    margin-right: 5px; /* Ajusta el margen a la derecha de los iconos */
+    font-size: 20px; /* Ajusta el tamaño de fuente de los iconos */
+}
+
+.newsletter {
+    width: calc(33.33% - 20px); /* Calcula el ancho de cada elemento para que haya 3 en una fila */
+    margin: 10px; /* Agrega un margen entre los elementos */
+    text-align: center; /* Centra el contenido */
+}
+
+input[type="email"] {
+    width: 200px; /* Ajuste del ancho del campo de correo electrónico */
+    height: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    transform: translateY(1px); /* Efecto de clic */
+}
+
+@media (min-width: 720px){
+    header{
+        
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #nosotros .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #nosotros .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    #nosotros h2{
+        margin-top: 0px;
+    }
+
+    #nosotros .img-container{
+      background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+      ), url("../img/clientes-3.jpg");
+      background-size: cover;
+      background-position: center center;
+      height: 400px;
+      width: 400px;
+    }
+
+    #ofrecemos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url(../img/salones24.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: rgb(30, 30, 30);
+        color: white;
+        height: 50vh;
+    }
+    
+    #galeria{
+        text-align: center;
+        padding: 200px 12px;
+        
+    }
+    /*galeria de fotos*/
+    #galeria .fotos{
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+    
+    .fotos img{
+        width: 0;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .5;
+        transition: .5s ease;
+    }
+    
+    .fotos img:hover{
+        cursor: pointer;
+        opacity: 1;
+        width: 20px;
+        height: 150px;
+        filter: contrast(125%);
+    }
+    
+    img{
+        max-width: 300px;
+        height: auto;
+    }
+    
+    #ofertas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(30, 30, 30);
+        color: white;
+        height: 50vh;
+    }
+    
+    #lugares{
+        text-align: center;
+        padding: 200px 12px;
+        
+    }
+    
+    /*galeria de fotos*/
+    #lugares .fotos{
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+    
+    .fotos img{
+        width: 0;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .5;
+        transition: .5s ease;
+    }
+    
+    .fotos img:hover{
+        cursor: pointer;
+        opacity: 1;
+        width: 20px;
+        height: 150px;
+        filter: contrast(125%);
+    }
+    
+    img{
+        max-width: 300px;
+        height: auto;
+    }
+    
+    #clientes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(30, 30, 30);
+        color: white;
+        height: 50vh;
+    }
+    
+    #paquetes{
+        text-align: center;
+        padding: 200px 12px;
+        
+    }
+    
+    footer {
+        background-color: rgb(230, 230, 230);
+        color: #393939;
+        padding: 20px 0;
+        text-align: center;
+        display: flex; /* Agrega display: flex; para usar flexbox eliminar */
+        justify-content: space-between; /* Divide el espacio entre los elementos eliminar */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea eliminar*/
+    }
+    
+    .redessociales {
+        width: calc(33.33% - 20px); /* Calcula el ancho de cada elemento para que haya 3 en una fila */
+        margin: 10px; /* Agrega un margen entre los elementos */
+        text-align: center; /* Centra el contenido */
+    
+    }
+    
+    .redessociales a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .redessociales a:hover {
+        color: #00f; /* Cambia el color al pasar el ratón sobre los iconos */
+    }
+    
+    .contactame {
+        display: flex; /* Utiliza flexbox para alinear verticalmente los elementos */
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Alinea los elementos horizontalmente al centro */
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .contactame p {
+        margin: 10px 0; /* Ajusta el margen entre los párrafos */
+        color: #333; /* Cambia el color del texto */
+        font-size: 18px; /* Ajusta el tamaño de fuente */
+        display: flex; /* Utiliza flexbox */
+        align-items: center; /* Alinea verticalmente los iconos con el texto */
+        justify-content: center; /* Alinea horizontalmente los iconos con el texto */
+    }
+    .contactame p i {
+        margin-right: 5px; /* Ajusta el margen a la derecha de los iconos */
+        font-size: 20px; /* Ajusta el tamaño de fuente de los iconos */
+    }
+    
+    .newsletter {
+        width: calc(33.33% - 20px); /* Calcula el ancho de cada elemento para que haya 3 en una fila */
+        margin: 10px; /* Agrega un margen entre los elementos */
+        text-align: center; /* Centra el contenido */
+    }
+    
+    input[type="email"] {
+        width: 200px; /* Ajuste del ancho del campo de correo electrónico */
+        height: 30px;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 10px 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+    }
+    
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    
+    .btn:active {
+        transform: translateY(1px); /* Efecto de clic */
+    }
+    
+}

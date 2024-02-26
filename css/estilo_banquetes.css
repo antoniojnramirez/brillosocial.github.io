@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+p{ font-size: 1.25em;}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(245, 245, 245);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(160, 32, 167);
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(160, 32, 167);
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 80vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el contenedor principal */
+div {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-size: 2.5em;
+    color: rgb(160, 32, 167);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los párrafos */
+p {
+    font-size: 1.1em;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las imágenes */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(230, 230, 230);
+    color: #393939;
+    padding: 20px 0;
+    text-align: center;
+    display: flex; /* Agrega display: flex; para usar flexbox eliminar */
+    justify-content: space-between; /* Divide el espacio entre los elementos eliminar */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea eliminar*/
+}
+
+.redessociales {
+    width: calc(33.33% - 20px); /* Calcula el ancho de cada elemento para que haya 3 en una fila */
+    margin: 10px; /* Agrega un margen entre los elementos */
+    text-align: center; /* Centra el contenido */
+
+}
+
+.redessociales a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.redessociales a:hover {
+    color: #00f; /* Cambia el color al pasar el ratón sobre los iconos */
+}
+
+.contactame {
+    display: flex; /* Utiliza flexbox para alinear verticalmente los elementos */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Alinea los elementos horizontalmente al centro */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contactame p {
+    margin: 10px 0; /* Ajusta el margen entre los párrafos */
+    color: #333; /* Cambia el color del texto */
+    font-size: 18px; /* Ajusta el tamaño de fuente */
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Alinea verticalmente los iconos con el texto */
+    justify-content: center; /* Alinea horizontalmente los iconos con el texto */
+}
+.contactame p i {
+    margin-right: 5px; /* Ajusta el margen a la derecha de los iconos */
+    font-size: 20px; /* Ajusta el tamaño de fuente de los iconos */
+}
+
+.newsletter {
+    width: calc(33.33% - 20px); /* Calcula el ancho de cada elemento para que haya 3 en una fila */
+    margin: 10px; /* Agrega un margen entre los elementos */
+    text-align: center; /* Centra el contenido */
+}
+
+input[type="email"] {
+    width: 200px; /* Ajuste del ancho del campo de correo electrónico */
+    height: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    transform: translateY(1px); /* Efecto de clic */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 720px){
+    header{
+        
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    .principal{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #principal .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .principal h2{
+        margin-top: 0px;
+    }
+}
